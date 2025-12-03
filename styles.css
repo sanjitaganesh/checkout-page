@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
+
+.checkout {
+  max-width: 500px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.buttons button {
+  width: 28px;
+  height: 28px;
+}
+
+.totals {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 6px;
+  margin-top: 8px;
+}
+
+button {
+  padding: 6px 12px;
+  cursor: pointer;
+}
