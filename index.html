@@ -1,35 +1,56 @@
 <!DOCTYPE html>
-<!-- redeploy -->
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <title>Checkout Page</title>
+  <meta charset="UTF-8">
+  <title>Checkout Demo</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+
 <h1>Checkout</h1>
 
-<section>
-    <h2>Your Cart</h2>
-    <img src="https://cdn.freecodecamp.org/curriculum/labs/cube.jpg" alt="rubix cube">
-</section>
-<section>
-     <h2>Payment Information</h2>
-    <form>
-        <label for="card-name">
-            Cardholder Name
-            <span aria-hidden=true>*</span>
-        </label>
-        <input required type="text" id="card-name" name="card-name" />
-        <label for="card-number">
-            Card Number
-            <span aria-hidden=true>*</span>
-        </label>
-        <input required type="text" id="card-number" name="card-number" aria-describedby="card-number-help">
-        <p id="card-number-help">Please enter your 16-digit card number without spaces or dashes.</p>
-    </form>
-</section>
-</body>
+<section class="cart">
+  <h2>Your Cart</h2>
 
+  <div class="item">
+    <span>Rubik's Cube</span>
+    <span>$10</span>
+
+    <div>
+      <button onclick="decrease()">-</button>
+      <span id="qty">1</span>
+      <button onclick="increase()">+</button>
+    </div>
+  </div>
+
+  <p>Subtotal: $<span id="subtotal">10</span></p>
+  <p>Tax (10%): $<span id="tax">1</span></p>
+  <h3>Total: $<span id="total">11</span></h3>
+</section>
+
+<section class="payment">
+  <h2>Payment</h2>
+
+  <form onsubmit="return validate()">
+
+    <label>
+      Card Number
+      <input type="text" id="card" maxlength="16" required>
+    </label>
+
+    <label>
+      CVV
+      <input type="text" id="cvv" maxlength="3" required>
+    </label>
+
+    <button type="submit">
+      Pay Now
+    </button>
+
+  </form>
+</section>
+
+<script src="script.js"></script>
+</body>
 </html>
